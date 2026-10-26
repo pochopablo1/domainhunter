@@ -1,0 +1,13 @@
+{
+  "name": "analizador-dominios",
+  "version": "1.0.0",
+  "description": "Analizador y Verificador de Dominios Vencidos (.AR & Global)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "cli": "node cli.js"
+  },
+  "keywords": ["domain", "whois", "expiration", "com.ar", "nic-ar"],
+  "author": "",
+  "license": "ISC"
+}

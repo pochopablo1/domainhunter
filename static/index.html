@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomainHunter - Radar Autopiloto de Dominios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">🌐</div>
+                <div>
+                    <h1>DomainHunter <span>.AR & Global</span></h1>
+                    <p>Radar Autopiloto & Valuador de Oportunidades de Compra</p>
+                </div>
+            </div>
+            <div class="badge-tag">Versión 1.2 - Autopilot Mode</div>
+        </header>
+
+        <!-- Autopilot Hero Action -->
+        <div class="hero-autopilot-card">
+            <div class="hero-content">
+                <h2>🚀 Modo Autopiloto: Encontrar la Mejor Oportunidad Real</h2>
+                <p>El sistema escaneará múltiples nichos, filtrará solo los dominios 100% LIBRES y seleccionará la gema con mayor potencial para comprar hoy.</p>
+            </div>
+            <button id="btnAutopilot" class="btn btn-hero">
+                <span>⚡</span> BUSCAR MEJOR OPORTUNIDAD AHORA
+            </button>
+        </div>
+
+        <!-- Featured Opportunity Card (Golden / Emerald) -->
+        <div id="featuredOpportunityCard" class="card featured-card hidden">
+            <div class="featured-badge">💎 #1 MEJOR OPORTUNIDAD RECOMENDADA DE HOY</div>
+            <div class="featured-body">
+                <div class="featured-title-group">
+                    <h3 id="featDomain">dominio.com.ar</h3>
+                    <div class="featured-tags">
+                        <span id="featScore" class="badge-score">pts: 95 | 🏆 PREMIUM</span>
+                        <span id="featPrice" class="val-est">$300 - $2,500+ USD</span>
+                    </div>
+                </div>
+                <p id="featJustification" class="featured-desc">
+                    Justificación comercial del dominio...
+                </p>
+                <div class="featured-action">
+                    <a id="featBuyBtn" href="#" target="_blank" class="btn btn-buy-now">
+                        🛒 COMPRAR ESTE DOMINIO AHORA EN NIC.AR
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="tab-analyzer">📋 Analizador Masivo</button>
+            <button class="nav-tab" data-tab="tab-niche">💡 Buscador por Nicho</button>
+            <button class="nav-tab" data-tab="tab-sources">🌐 Dónde Encontrar Vencidos</button>
+        </nav>
+
+        <!-- TAB 1: Analizador Masivo -->
+        <div id="tab-analyzer" class="tab-content">
+            <section class="card input-card">
+                <div class="card-header">
+                    <h2>📋 Pega tu texto o lista de dominios</h2>
+                    <span class="subtext">Acepta texto sucio de webs, archivos o listas sueltas</span>
+                </div>
+
+                <div class="textarea-wrapper">
+                    <textarea id="rawInput" placeholder="Ejemplo:&#10;1. Homes.com.ar - Creado en 1997&#10;2. PAMPA.com.ar (duplicado)&#10;3. turismo-nqn.com.ar !!!&#10;4. emprender.ar&#10;5. mi-tienda.net.ar"></textarea>
+                    <div class="textarea-footer">
+                        <span id="charCounter">0 caracteres</span>
+                        <button id="btnSample" class="btn-ghost">Cargar Ejemplo</button>
+                    </div>
+                </div>
+
+                <div class="actions-bar">
+                    <button id="btnClean" class="btn btn-secondary">
+                        <span>🔍</span> 1. Extraer y Limpiar
+                    </button>
+                    <button id="btnAnalyze" class="btn btn-primary">
+                        <span>⚡</span> 2. Analizar & Valuar
+                    </button>
+                    <button id="btnClear" class="btn btn-danger">Limpiar</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- TAB 2: Buscador por Nicho -->
+        <div id="tab-niche" class="tab-content hidden">
+            <section class="card input-card">
+                <div class="card-header">
+                    <h2>💡 Generador & Escáner por Palabra Clave</h2>
+                    <span class="subtext">Ingresa el rubro o palabra de tu interés (ej: turismo, autos, propiedades, salud, crypto) y el sistema generará y escaneará combinaciones comerciales en .com.ar y .com</span>
+                </div>
+
+                <div class="niche-input-group">
+                    <input type="text" id="nicheKeyword" placeholder="Ej: turismo, propiedades, abogado, remate..." class="input-text">
+                    <button id="btnGenerateNiche" class="btn btn-primary">⚡ Generar & Escanear Nicho</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- TAB 3: Fuentes de Dominios Vencidos -->
+        <div id="tab-sources" class="tab-content hidden">
+            <section class="card sources-card">
+                <div class="card-header">
+                    <h2>🌐 ¿Dónde encontrar dominios que están por vencer?</h2>
+                    <span class="subtext">Las mejores fuentes globales y locales para encontrar dominios expirados</span>
+                </div>
+
+                <div class="sources-grid">
+                    <div class="source-box">
+                        <div class="source-icon">🌍</div>
+                        <h3>ExpiredDomains.net</h3>
+                        <p>El portal #1 del mundo. Descarga gratis listas diarias de dominios <code>.com</code>, <code>.net</code> y <code>.org</code> recién vencidos (Pending Delete), filtrados por antigüedad, backlinks y extensión.</p>
+                        <a href="https://www.expireddomains.net" target="_blank" class="btn btn-secondary btn-small">Visitar ExpiredDomains</a>
+                    </div>
+
+                    <div class="source-box">
+                        <div class="source-icon">🇦🇷</div>
+                        <h3>NIC Argentina (Nic.ar)</h3>
+                        <p>Consulta el estado de dominios <code>.com.ar</code> y <code>.ar</code>. Puedes usar palabras de alta demanda de nuestro Generador por Nicho para verificar qué marcas o rubros han sido dados de baja.</p>
+                        <a href="https://nic.ar" target="_blank" class="btn btn-secondary btn-small">Visitar NIC Argentina</a>
+                    </div>
+
+                    <div class="source-box">
+                        <div class="source-icon">🔨</div>
+                        <h3>Subastas & Catchers</h3>
+                        <p>Plataformas como DropCatch, Dynadot y GoDaddy Auctions permiten atrapar dominios justo en el milisegundo en que se liberan en el registro central.</p>
+                        <a href="https://www.dropcatch.com" target="_blank" class="btn btn-secondary btn-small">Visitar DropCatch</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loader" class="loader-container hidden">
+            <div class="spinner"></div>
+            <p id="loaderText">Ejecutando Radar Autopiloto...</p>
+        </div>
+
+        <!-- Metrics Dashboard -->
+        <section id="metricsSection" class="metrics-grid hidden">
+            <div class="metric-card total">
+                <div class="metric-val" id="metricTotal">0</div>
+                <div class="metric-label">Dominios Procesados</div>
+            </div>
+            <div class="metric-card free">
+                <div class="metric-val" id="metricFree">0</div>
+                <div class="metric-label">🟢 Libres / Disponibles</div>
+            </div>
+            <div class="metric-card expiring">
+                <div class="metric-val" id="metricExpiring">0</div>
+                <div class="metric-label">🟡 Vencidos / Por Vencer</div>
+            </div>
+            <div class="metric-card taken">
+                <div class="metric-val" id="metricTaken">0</div>
+                <div class="metric-label">🔴 Registrados</div>
+            </div>
+            <div class="metric-card premium">
+                <div class="metric-val" id="metricPremium">0</div>
+                <div class="metric-label">🏆 Dominios Premium</div>
+            </div>
+        </section>
+
+        <!-- Results Table Section -->
+        <section id="resultsSection" class="card results-card hidden">
+            <div class="table-toolbar">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="ALL">Todos</button>
+                    <button class="filter-btn" data-filter="DISPONIBLE">🟢 Libres</button>
+                    <button class="filter-btn" data-filter="PREMIUM">🏆 Premium (Score > 75)</button>
+                    <button class="filter-btn" data-filter="VENCIDO">🟡 Vencidos</button>
+                    <button class="filter-btn" data-filter="REGISTRADO">🔴 Registrados</button>
+                </div>
+
+                <div class="search-export">
+                    <input type="text" id="tableSearch" placeholder="Filtrar dominio...">
+                    <button id="btnExportCSV" class="btn btn-small btn-success">📥 Exportar CSV</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Dominio</th>
+                            <th>Estado</th>
+                            <th>Score & Categoría</th>
+                            <th>Valor Est. USD</th>
+                            <th>Expiración</th>
+                            <th>DNS</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTbody">
+                        <!-- Dynamic Rows -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
