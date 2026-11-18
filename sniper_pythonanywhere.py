@@ -99,12 +99,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 VIP_FILE = os.path.join(BASE_DIR, "watchlist_vip.json")
 STATUS_FILE = os.path.join(BASE_DIR, "watchlist_status.json")
 
-# Semilla inicial VIP (los que ya sabemos que están vencidos o por vencer pronto)
+# Semilla inicial VIP (los que ya sabemos que están libres, vencidos en caída o por vencer pronto)
 SEMILLA_VIP = [
-    "propiedades.com.ar", "catering.com.ar", "vinos.com.ar", "franquicias.com.ar",
-    "clinicas.com.ar", "talleres.com.ar", "contadores.com.ar", "exportaciones.com.ar",
-    "nutricionistas.com.ar", "miamirealtyhub.com", "rentfast.com", "creditpro.com",
-    "learnfast.com", "dentalcarepro.com"
+    "transferencias.com.ar", "lubricentros.com.ar", "catering.com.ar", "talleres.com.ar",
+    "contadores.com.ar", "multas.com.ar", "chapistas.com.ar", "acoplados.com.ar",
+    "remises.com.ar", "propiedades.com.ar", "vinos.com.ar", "franquicias.com.ar",
+    "clinicas.com.ar", "exportaciones.com.ar", "nutricionistas.com.ar",
+    "miamirealtyhub.com", "rentfast.com", "creditpro.com", "learnfast.com", "dentalcarepro.com"
 ]
 
 def cargar_vip_persistente() -> list[str]:
@@ -311,7 +312,8 @@ def ejecutar_sniper(full_scan: bool = False):
         if est != "REGISTRADO" or (dias is not None and dias <= 75):
             print(f" [{idx}/{len(candidatos)}] 🎯 {dom.ljust(24)} | {est.ljust(18)} | Vence: {str(info['fecha_expiracion']).ljust(10)} ({dias}d)")
         
-        time.sleep(0.22)
+        # Pausa de 1.2s para dominios .ar así NIC.ar nunca aplica rate-limit en lotes grandes
+        time.sleep(1.2 if dom.endswith(".ar") else 0.25)
 
     # Ordenar por cercanía de vencimiento
     vencidos_en_caida.sort(key=lambda x: x.get("dias_restantes") if x.get("dias_restantes") is not None else 0)
