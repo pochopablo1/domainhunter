@@ -1,23 +1,6 @@
 {
-  "timestamp": "2026-10-26T13:57:33.143Z",
-  "alertas_compra_inmediata": [
-    {
-      "domain": "exportaciones.com.ar",
-      "region": "Argentina (NIC.ar - $8.500 ARS)",
-      "estUsd": "$600 - $1,500 USD",
-      "cpc": "$1.80 - $6.50 USD/clic",
-      "portal": "Calculadora de Retenciones, Dólar Blend y Aranceles de Comercio Exterior",
-      "link": "https://nic.ar"
-    },
-    {
-      "domain": "motosusadas.com.ar",
-      "region": "Argentina (NIC.ar - $8.500 ARS)",
-      "estUsd": "$400 - $900 USD",
-      "cpc": "$0.80 - $2.80 USD/clic",
-      "portal": "Valuador Oficial de Motos + Calculadora de Transferencia DNRPA y Seguros de Moto",
-      "link": "https://nic.ar"
-    }
-  ],
+  "timestamp": "2026-11-18T12:00:26.763Z",
+  "alertas_compra_inmediata": [],
   "argentina": [
     {
       "domain": "propiedades.com.ar",
@@ -25,12 +8,9 @@
       "cpc": "$1.50 - $6.00 USD/clic",
       "portal": "Calculadora de Alquiler (ICL/IPC) + Gastos de Escrituración e Hipoteca",
       "nota": "Venció 14/10/2026 - Ventana de caída: 13/11 al 28/11",
-      "available": false,
-      "reg": "1999-10-14",
-      "exp": "2026-10-14",
-      "holder": "TOLEDO ADRIAN MARCELO",
-      "dias": -12,
-      "estado": "🔥 VENCIDO HACE 12 DÍAS (En Gracia/Caída)"
+      "error": true,
+      "dias": null,
+      "estado": "REGISTRADO"
     },
     {
       "domain": "catering.com.ar",
@@ -38,12 +18,9 @@
       "cpc": "$0.80 - $2.50 USD/clic",
       "portal": "Calculadora de Bebidas y Presupuesto para Eventos / Directorio de Catering",
       "nota": "Venció 24/10/2026 - Ventana de caída: 23/11 al 08/12",
-      "available": false,
-      "reg": "2012-10-24",
-      "exp": "2026-10-24",
-      "holder": "VERTICALES INTERCOM S.L.",
-      "dias": -2,
-      "estado": "🔥 VENCIDO HACE 2 DÍAS (En Gracia/Caída)"
+      "error": true,
+      "dias": null,
+      "estado": "REGISTRADO"
     },
     {
       "domain": "vinos.com.ar",
@@ -51,12 +28,9 @@
       "cpc": "$0.70 - $2.20 USD/clic",
       "portal": "Guía de Bodegas, Catas & Comparador de Precios de Vinos Argentinos",
       "nota": "Vence 07/11/2026 - Sin web activa",
-      "available": false,
-      "reg": "2013-06-07",
-      "exp": "2026-11-07",
-      "holder": "LOPEZ Crespo ANTONIO DOMINGO",
-      "dias": 12,
-      "estado": "🟡 VENCE EN 12 DÍAS"
+      "error": true,
+      "dias": null,
+      "estado": "REGISTRADO"
     },
     {
       "domain": "franquicias.com.ar",
@@ -64,12 +38,9 @@
       "cpc": "$2.00 - $7.00 USD/clic",
       "portal": "Calculadora de Retorno de Inversión (ROI) + Catálogo de Franquicias Argentinas",
       "nota": "Vence 28/11/2026 - Creado en 1997, sin web activa",
-      "available": false,
-      "reg": "1997-11-28",
-      "exp": "2026-11-28",
-      "holder": "SOTIROV JORGE",
-      "dias": 33,
-      "estado": "🟡 VENCE EN 33 DÍAS"
+      "error": true,
+      "dias": null,
+      "estado": "REGISTRADO"
     },
     {
       "domain": "clinicas.com.ar",
@@ -77,12 +48,9 @@
       "cpc": "$1.50 - $5.50 USD/clic",
       "portal": "Comparador de Prepagas (OSDE, Swiss Medical) + Cartilla de Clínicas y Guardia",
       "nota": "Vence 03/12/2026 - Sin web activa",
-      "available": false,
-      "reg": "2015-05-03",
-      "exp": "2026-12-03",
-      "holder": "SOFT OVER IP SA",
-      "dias": 38,
-      "estado": "🟡 VENCE EN 38 DÍAS"
+      "error": true,
+      "dias": null,
+      "estado": "REGISTRADO"
     },
     {
       "domain": "talleres.com.ar",
@@ -90,12 +58,9 @@
       "cpc": "$0.90 - $3.00 USD/clic",
       "portal": "Estimador de Costo de Service y Chapa/Pintura + Mapa de Talleres y VTV",
       "nota": "Vence 04/12/2026 - NS: 0 (Abandonado)",
-      "available": false,
-      "reg": "2025-12-04",
-      "exp": "2026-12-04",
-      "holder": "PERICOLO LUISA DANIELA",
-      "dias": 39,
-      "estado": "🟡 VENCE EN 39 DÍAS"
+      "error": true,
+      "dias": null,
+      "estado": "REGISTRADO"
     },
     {
       "domain": "contadores.com.ar",
@@ -103,12 +68,9 @@
       "cpc": "$2.00 - $8.00 USD/clic",
       "portal": "Calculadora de Monotributo, Ganancias y Honorarios Contables",
       "nota": "Vence 09/12/2026 - NS: 0 (Abandonado)",
-      "available": false,
-      "reg": "2024-12-09",
-      "exp": "2026-12-09",
-      "holder": "CAZENAVE PATRICIO",
-      "dias": 44,
-      "estado": "🟡 VENCE EN 44 DÍAS"
+      "error": true,
+      "dias": null,
+      "estado": "REGISTRADO"
     },
     {
       "domain": "exportaciones.com.ar",
@@ -116,10 +78,9 @@
       "cpc": "$1.80 - $6.50 USD/clic",
       "portal": "Calculadora de Retenciones, Dólar Blend y Aranceles de Comercio Exterior",
       "nota": "Monitoreo de disponibilidad inmediata",
-      "available": true,
-      "status": "DISPONIBLE_YA",
+      "error": true,
       "dias": null,
-      "estado": "🟢 LIBRE PARA COMPRAR YA"
+      "estado": "REGISTRADO"
     },
     {
       "domain": "motosusadas.com.ar",
@@ -127,10 +88,9 @@
       "cpc": "$0.80 - $2.80 USD/clic",
       "portal": "Valuador Oficial de Motos + Calculadora de Transferencia DNRPA y Seguros de Moto",
       "nota": "Monitoreo de disponibilidad inmediata",
-      "available": true,
-      "status": "DISPONIBLE_YA",
+      "error": true,
       "dias": null,
-      "estado": "🟢 LIBRE PARA COMPRAR YA"
+      "estado": "REGISTRADO"
     }
   ],
   "exterior": [
@@ -140,15 +100,9 @@
       "cpc": "$3.50 - $14.00 USD/clic",
       "portal": "Miami Mortgage & HOA Calculator + Investment ROI Finder",
       "nota": "En Redemption Period (Venció 28/08/2026) - A días de caer libre",
-      "available": false,
-      "reg": "2023-08-28",
-      "exp": "2026-08-28",
-      "statuses": [
-        "client transfer prohibited",
-        "redemption period"
-      ],
-      "dias": -59,
-      "estado": "🔥 REDEMPTION PERIOD (59d post-exp)"
+      "error": true,
+      "dias": null,
+      "estado": "REGISTRADO"
     },
     {
       "domain": "rentfast.com",
@@ -156,14 +110,9 @@
       "cpc": "$2.50 - $9.00 USD/clic",
       "portal": "Rent Affordability Calculator + Tenant Screening & Lease Guide",
       "nota": "Vence 06/12/2026 - Creado en 1999, sin DNS activo",
-      "available": false,
-      "reg": "1999-12-06",
-      "exp": "2026-12-06",
-      "statuses": [
-        "client transfer prohibited"
-      ],
-      "dias": 41,
-      "estado": "🟡 VENCE EN 41 DÍAS"
+      "error": true,
+      "dias": null,
+      "estado": "REGISTRADO"
     },
     {
       "domain": "creditpro.com",
@@ -171,14 +120,9 @@
       "cpc": "$6.00 - $25.00 USD/clic",
       "portal": "Credit Score Simulator + Debt Payoff & Loan APR Calculator",
       "nota": "Vence 21/12/2026 - Creado en 1998, estado active simple, sin DNS",
-      "available": false,
-      "reg": "1998-12-21",
-      "exp": "2026-12-21",
-      "statuses": [
-        "active"
-      ],
-      "dias": 56,
-      "estado": "🟡 VENCE EN 56 DÍAS"
+      "error": true,
+      "dias": null,
+      "estado": "REGISTRADO"
     },
     {
       "domain": "learnfast.com",
@@ -186,16 +130,8 @@
       "cpc": "$2.00 - $8.00 USD/clic",
       "portal": "AI Certification & Online Degree ROI Calculator",
       "nota": "Vence 26/12/2026 - Creado en 2003, sin DNS",
-      "available": false,
-      "reg": "2003-12-26",
-      "exp": "2026-12-26",
-      "statuses": [
-        "client delete prohibited",
-        "client renew prohibited",
-        "client transfer prohibited",
-        "client update prohibited"
-      ],
-      "dias": 61,
+      "error": true,
+      "dias": null,
       "estado": "REGISTRADO"
     },
     {
@@ -204,13 +140,8 @@
       "cpc": "$3.00 - $12.00 USD/clic",
       "portal": "Dental Implant & Invisalign Cost Estimator + Insurance Finder",
       "nota": "Vence 31/12/2026 - 1 año de antigüedad, sin DNS",
-      "available": false,
-      "reg": "2024-12-31",
-      "exp": "2026-12-31",
-      "statuses": [
-        "client transfer prohibited"
-      ],
-      "dias": 66,
+      "error": true,
+      "dias": null,
       "estado": "REGISTRADO"
     }
   ]

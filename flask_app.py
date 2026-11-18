@@ -5,7 +5,7 @@ import json
 from flask import Flask, request, jsonify, send_from_directory, Response
 from core.cleaner import analizar_estadisticas_extraccion, limpiar_y_extraer_dominios
 from core.checker import analizar_lote_dominios, analizar_dominio
-from sniper_pythonanywhere import WATCHLIST_DOMINIOS, ejecutar_sniper
+from sniper_pythonanywhere import cargar_vip_persistente, seleccionar_lote_del_dia, ejecutar_sniper
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_DIR = os.path.join(BASE_DIR, "static")
@@ -66,7 +66,7 @@ def api_generate_niche():
 
 @app.route("/api/radar", methods=["POST"])
 def api_radar():
-    resultados = analizar_lote_dominios(WATCHLIST_DOMINIOS)
+    resultados = analizar_lote_dominios(seleccionar_lote_del_dia(full_scan=False))
     oportunidades = [
         r for r in resultados
         if r["estado"] in ["DISPONIBLE", "PENDING_DELETE", "REDEMPTION_PERIOD", "EXPIRADO", "PROXIMO_A_VENCER"]
